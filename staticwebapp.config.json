@@ -1,0 +1,22 @@
+{
+  "routes": [
+    { "route": "/wp-json/*",   "statusCode": 404 },
+    { "route": "/xmlrpc.php",  "statusCode": 404 },
+    { "route": "/feed/*",      "statusCode": 404 },
+    { "route": "/wp-admin/*",  "statusCode": 404 }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 404
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "mimeTypes": {
+    ".xsl": "text/xml"
+  }
+}

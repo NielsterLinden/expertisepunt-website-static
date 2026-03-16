@@ -1,0 +1,21 @@
+# WordPress plugins — PHP only, not served by the static site
+wp-content/plugins/
+
+# Divi theme PHP-only subdirectories (keeps js/, core/, css/, images/ etc.)
+wp-content/themes/Divi/includes/
+wp-content/themes/Divi/epanel/
+wp-content/themes/Divi/ai-app/
+wp-content/themes/Divi/onboarding/
+wp-content/themes/Divi/cloud/
+
+# WordPress core PHP files — keep only jQuery (referenced by index.html)
+wp-includes/*
+!wp-includes/js
+wp-includes/js/*
+!wp-includes/js/jquery
+
+# Claude Code memory files
+.claude/
+
+# Windows NUL artifact
+nul
